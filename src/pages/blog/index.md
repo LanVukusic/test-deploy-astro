@@ -1,5 +1,7 @@
 ---
-
+layout: ../../layouts/MarkdownLayout.astro
+title: Dev log post
+draft: true
 ---
 
 # Dev log

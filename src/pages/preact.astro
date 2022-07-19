@@ -4,10 +4,12 @@ import Card from "../components/Card.astro";
 import { Counter } from "../components/Counter";
 ---
 
-<Layout title="Welcome to Astro.">
-  <main>
-    <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-    <div style="padding: 2rem;">
+<Layout title="test of hydrated components">
+  <main style="padding: 3rem;">
+    <h1>
+      Preact test
+    </h1>
+    <div style="padding: 1rem;">
       <Counter client:load />
     </div>
   </main>
