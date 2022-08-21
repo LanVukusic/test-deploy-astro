@@ -1,0 +1,71 @@
+---
+const dummy = [
+  {
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet nisl. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet nisl.",
+    from: new Date(),
+    name: "Primary School",
+  },
+
+  {
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet nisl. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet nisl.",
+    from: new Date(),
+    name: "Middle school",
+  },
+  {
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet nisl. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet nisl.",
+    from: new Date(),
+    name: "Python programming certificate",
+    link: {
+      url: "https://www.udemy.com/certificate/UC-8e2b0b0c-1b5a-4b6f-8f7a-1f2b2b2b2b2b/",
+      text: "View certificate",
+    },
+  },
+  {
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet nisl. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet nisl.",
+    from: new Date(),
+    name: "Bachelor, Computer Science",
+  },
+];
+---
+
+<div class="w-full flex flex-col items-center mt-20">
+  <h2 class="text-7xl text-gray-200">
+    My education
+    <span class="text-green-400">&</span>
+    certificates
+  </h2>
+  <div class="p-5 max-w-3xl">
+    {
+      dummy.map((edu) => (
+        <div class="flex items-center">
+          <p class="text-md  text-green-300 font-bold px-4 border-green-500 p-2 rounded-md">
+            {edu.from.toLocaleDateString()}
+          </p>
+          <div class="border-l-2 py-3 border-0 border-l-green-400 y-5 border-none">
+            <div class="px-1 items-center">
+              <h3 class="px-4 py-1 text-xl font-bold text-gray-300 bold w-fit">
+                {edu.name}
+              </h3>
+            </div>
+            <p class="px-5 py-1 text-gray-400 ">{edu.description}</p>
+            {edu.link && (
+              <a class="px-5 text-green-300 underline" href={edu.link.url}>
+                {edu.link.text}
+              </a>
+            )}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+</style>

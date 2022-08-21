@@ -1,0 +1,35 @@
+---
+import { FaGithub, FaCopyright } from "react-icons/fa";
+import { SiUpwork } from "react-icons/si";
+---
+
+<div class="w-full bg-gray-700" style="height: 2px;"></div>
+<div class="p-4 flex justify-around items-center bg-gray-800">
+  <div class="text-gray-400 flex items-center">
+    <span class="text-gray-300 font-bold px-2"> Lan Vukušič,</span>
+    <span class="pr-2 text-green-300 flex items-center">
+      <FaCopyright client:load />
+    </span>
+    {new Date().toDateString()}
+  </div>
+  <div class="flex">
+    <a
+      class="bg-gray-700 flex p-2 h-full mx-2 text-gray-300 text-2xl"
+      href="https://github.com/LanVukusic"
+    >
+      <FaGithub />
+    </a>
+    <a
+      class="bg-gray-700 flex p-2 h-full mx-2 text-gray-300 text-2xl"
+      href="https://www.upwork.com/freelancers/~01c1940c109bd729f8"
+    >
+      <SiUpwork />
+    </a>
+  </div>
+</div>
+
+<style>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+</style>
